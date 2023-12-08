@@ -23,6 +23,9 @@ const config: Config = {
         primary: '#F91942',
         gray: '#191B20'
       },
+      screens: {
+        'xs': '375px',
+      }
     },
   },
   plugins: [],

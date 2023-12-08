@@ -18,7 +18,8 @@ export const Section = ({ children, hash, full = false, className }: SectionProp
 			initial="hidden"
 			whileInView="show"
 			viewport={{ once: true, amount: 0.1 }}
-			className={cn('mx-auto xs:px-[2rem] xs:w-full sm:container ', className)}
+			// className={cn('mx-auto xs:px-[2rem] xs:w-full sm:container ', className)}
+			className={cn('xs:px-[2rem] xs:w-full w-screen', className)}
 		>
 			{hash &&<div id={hash}/>}
 			{children}
