@@ -10,6 +10,7 @@ const config: Config = {
     fontSize: {
       base: '16px',
       xl: '24px',
+      '1xl': '32px',
       '2xl': '48px',
       '3xl': '64px'
     },
