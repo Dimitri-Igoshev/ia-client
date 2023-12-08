@@ -3,7 +3,7 @@
 import { Canvas } from '@react-three/fiber'
 import { Suspense } from 'react'
 import { OrbitControls, useGLTF } from '@react-three/drei'
-import { Loader } from '@/components/layout'
+// import { Loader } from '@/components/layout'
 
 const Earth = () => {
 	const earth = useGLTF('/earth/scene.gltf')
