@@ -25,13 +25,13 @@ export const Hero = async () => {
 					</div> */}
 				</div>
 			</div>
-			{/* <video
+			<video
 				src={`/videos/stars.mov`}
 				loop
 				muted
 				autoPlay
 				className="w-screen h-screen absolute top-0 left-0 -z-10 object-cover"
-			/> */}
+			/>
 		</Section>
 	)
 }
