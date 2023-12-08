@@ -11,7 +11,7 @@ interface ButtonProps extends DetailedHTMLProps<ButtonHTMLAttributes<HTMLButtonE
 export const Button = ({ children, size = 'm', theme = 'outline', color = 'primary', className, ...props }: ButtonProps) => {
 	return (
 		<button className={cn(
-			'flex justify-center items-center rounded-full font-bold transition-all duration-500',
+			'flex justify-center items-center rounded-full font-semibold transition-all duration-500',
 			{
 				['bg-transparent border-[2px] border-primary text-primary hover:bg-primary hover:text-white']: theme === 'outline',
 				['bg-primary text-white hover:scale-110']: theme === 'filled',
