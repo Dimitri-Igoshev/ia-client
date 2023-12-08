@@ -51,7 +51,7 @@ export const Navbar: FunctionComponent<NavbarProps> = () => {
 				>
 					{t("button")}
 				</Button>
-				<HiOutlineMenu className="cursor-pointer text-[3.2rem] flex lg:hidden" />
+				<HiOutlineMenu className="cursor-pointer text-[32px] flex lg:hidden" />
 			</div>
 		</header>
 	);
