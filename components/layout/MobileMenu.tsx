@@ -47,9 +47,9 @@ const MobileMenu: FunctionComponent<MobileMenuProps> = ({
 
           <div className="flex items-center justify-center gap-4 mt-6">
             <MdOutlineLanguage className="text-xl" />
-            <p className="cursor-pointer text-lg" onClick={() => window.open(`/en`, 'self')}>En</p>
-            <p className="cursor-pointer text-lg" onClick={() => window.open(`/de`, 'self')}>De</p>
-            <p className="cursor-pointer text-lg" onClick={() => window.open(`/ru`, 'self')}>Ru</p>
+            <p className="cursor-pointer text-lg" onClick={() => window.open(`/en`, '_self')}>En</p>
+            <p className="cursor-pointer text-lg" onClick={() => window.open(`/de`, '_self')}>De</p>
+            <p className="cursor-pointer text-lg" onClick={() => window.open(`/ru`, '_self')}>Ru</p>
           </div>
 				</div>
 			)}

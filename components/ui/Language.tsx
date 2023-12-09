@@ -20,7 +20,7 @@ export const Language = () => {
 						<li
 							key={language}
 							className="transition-all duration-500 hover:text-primary capitalize"
-							onClick={() => window.open(`/${language}`, 'self')}
+							onClick={() => window.open(`/${language}`, '_self')}
 						>
 							{language}
 						</li>
