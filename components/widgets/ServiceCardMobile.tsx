@@ -20,7 +20,7 @@ interface ServiceCardMobileProps
 	service: any;
 	index: number;
 	opened: boolean;
-	onOpen: (index: number) => void;
+	onOpen: (index: number | undefined) => void;
 }
 
 export const ServiceCardMobile: FunctionComponent<ServiceCardMobileProps> = ({
@@ -39,7 +39,7 @@ export const ServiceCardMobile: FunctionComponent<ServiceCardMobileProps> = ({
 		>
 			<div
 				className="bg-gray w-full rounded-3xl cursor-pointer flex flex-col p-6 gap-6 transition-all duration-300 "
-				onClick={() => onOpen(index)}
+				onClick={() => opened ? onOpen(undefined) : onOpen(index)}
 			>
 				<div className="flex gap-6 items-center">
 					<Image
