@@ -1,12 +1,11 @@
 import { Hero, Services } from "@/components/sections";
-import Image from "next/image";
 
 export default function Home() {
 	return (
 		<main>
 			<Hero />
 			<Services />
-			<Image src={`/icons/corporate.png`} alt="test" width={100} height={100} />
+			<img src={`/icons/corporate.png`} alt="test" className="w-[100px] h-[100px]" />
 		</main>
 	);
 }
