@@ -9,6 +9,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { useLocale } from "next-intl";
 
+import { MdDiscount } from "react-icons/md";
+
 interface ServiceCardProps
 	extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {
 	service: any;
@@ -59,7 +61,7 @@ export const ServiceCard = ({ service, index }: ServiceCardProps) => {
 								{service.price[locale]}
 							</span>
 						</div>
-						<div className="w-full">
+						<div className="w-full lg:w-auto">
 							<Link href={service.path}>
 								<Button size="s" className="w-full 2xl:w-auto">
 									{t("button")}

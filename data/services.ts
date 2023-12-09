@@ -26,7 +26,7 @@ export const services = [
 			de: "€ 499",
 			ru: "39'000 ₽"
 		},
-		img: 'promo.svg',
+		img: 'promo.png',
 		size: 150,
 		path: '#'
 	},
@@ -47,7 +47,7 @@ export const services = [
 			de: "€ 999",
 			ru: "79'000 ₽"
 		},
-		img: 'corporate.svg',
+		img: 'corporate.png',
 		size: 128,
 		path: '#'
 	},
@@ -68,7 +68,7 @@ export const services = [
 			de: "€ 1'499",
 			ru: "119'000 ₽"
 		},
-		img: 'ecommerce.svg',
+		img: 'ecommerce.png',
 		size: 125,
 		path: '#'
 	},
@@ -89,7 +89,7 @@ export const services = [
 			de: "€ 1'999",
 			ru: "159'000 ₽"
 		},
-		img: 'portals.svg',
+		img: 'portals.png',
 		size: 139,
 		path: '#'
 	},
@@ -110,7 +110,7 @@ export const services = [
 			de: "€ 1'999",
 			ru: "159'000 ₽"
 		},
-		img: 'mobile.svg',
+		img: 'mobile.png',
 		size: 136,
 		path: '#'
 	},
@@ -131,7 +131,7 @@ export const services = [
 			de: "€ 99",
 			ru: "7'900 ₽"
 		},
-		img: 'promotion.svg',
+		img: 'promotion.png',
 		size: 150,
 		path: '#'
 	},
@@ -152,7 +152,7 @@ export const services = [
 			de: "€ 2'999",
 			ru: "239'000 ₽"
 		},
-		img: 'marketing.svg',
+		img: 'marketing.png',
 		size: 140,
 		path: '#'
 	},
@@ -173,7 +173,7 @@ export const services = [
 			de: "€ 19",
 			ru: "1'590 ₽"
 		},
-		img: 'hosting.svg',
+		img: 'hosting.png',
 		size: 135,
 		path: '#'
 	},
