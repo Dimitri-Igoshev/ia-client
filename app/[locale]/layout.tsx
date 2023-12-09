@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Nunito_Sans } from "next/font/google";
 import "../globals.css";
 import { NextIntlClientProvider } from 'next-intl'
 import { notFound } from "next/navigation";
 import { Navbar } from "@/components/layout"
 
-const inter = Inter({ subsets: ["latin"] });
+const font = Nunito_Sans({ subsets: ['latin', 'cyrillic'] })
 
 const locales = ["en", "de", "ru"];
 
@@ -19,7 +19,7 @@ export default async function RootLayout({ children, params: { locale } }: any) 
 
 	return (
 		<html lang={locale}>
-			<body className={inter.className}>
+			<body className={font.className}>
       <NextIntlClientProvider locale={locale || 'de'} messages={(await import(`@/i18n/${locale || 'de'}.json`)).default}>
 				<div className="relative">
           <Navbar />
