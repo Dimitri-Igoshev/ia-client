@@ -20,7 +20,7 @@ export const Header = ({ text, className, ...props }: HeaderProps) => {
 				{...props}
 			>
 				{firstWord}
-				<span className='text-primary font-bold'> {textArr.join(' ')}</span>
+				<span className='text-primary font-semibold'> {textArr.join(' ')}</span>
 			</h2>
 		</motion.div>
 	)
