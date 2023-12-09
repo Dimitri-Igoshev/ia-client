@@ -30,7 +30,7 @@ export const ServiceCard = ({ service, index }: ServiceCardProps) => {
 				<div className="bg-black-violet h-full w-full flex flex-col items-center justify-between rounded-[25px] p-[30px] back">
 					<div className="flex items-center justify-center h-full w-full">
 						<Image
-							src={`/icons/${service.img}`}
+							src={`${process.env.API_URL}/icons/${service.img}`}
 							alt={service.title[locale]}
 							width={service.size}
 							height={service.size}
