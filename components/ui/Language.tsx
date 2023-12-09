@@ -9,11 +9,6 @@ const locales = ['en', 'de', 'ru']
 export const Language = () => {
 	const locale = useLocale();
 	const languages = locales.filter(l => l !== locale)
-	const router = useRouter()
-
-	const onLanguageSwitch = async (language: string) => {
-		await router.push(`/${language}/`)
-	}
 
 	return (
 		<div className="relative group/lang items-center gap-[5px] text-base cursor-pointer hidden lg:flex">
@@ -25,7 +20,7 @@ export const Language = () => {
 						<li
 							key={language}
 							className="transition-all duration-500 hover:text-primary capitalize"
-							onClick={() => onLanguageSwitch(language)}
+							onClick={() => window.open(`/${language}`, 'self')}
 						>
 							{language}
 						</li>

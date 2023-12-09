@@ -7,12 +7,14 @@ import Image from "next/image";
 import { Menu } from "@/components/layout";
 import { Button, Language } from "../ui";
 import { HiOutlineMenu } from "react-icons/hi";
+import MobileMenu from "./MobileMenu";
 
 interface NavbarProps {}
 
 export const Navbar: FunctionComponent<NavbarProps> = () => {
 	const t = useTranslations("Navbar");
 
+	const [isMenu, setIsMenu] = useState(false);
 	const [isModal, setIsModal] = useState(false);
 
 	const closeModal = () => {
@@ -48,8 +50,10 @@ export const Navbar: FunctionComponent<NavbarProps> = () => {
 				>
 					{t("button")}
 				</Button>
-				<HiOutlineMenu className="cursor-pointer text-1xl flex lg:hidden hover:text-primary" />
+				<HiOutlineMenu className="cursor-pointer text-1xl flex lg:hidden hover:text-primary" onClick={() => setIsMenu(true)} />
 			</div>
+
+			<MobileMenu isOpen={isMenu} onClose={() => setIsMenu(false)}/>
 		</header>
 	);
 };
