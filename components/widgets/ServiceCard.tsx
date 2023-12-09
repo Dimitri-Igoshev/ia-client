@@ -9,8 +9,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { useLocale } from "next-intl";
 
-import { MdDiscount } from "react-icons/md";
-
 interface ServiceCardProps
 	extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {
 	service: any;
@@ -27,7 +25,7 @@ export const ServiceCard = ({ service, index }: ServiceCardProps) => {
 			variants={fadeIn("right", "spring", 0.5 * index, 0.5)}
 		>
 			<div className="absolute card-front top-0 left-0 w-full h-full rounded-[25px] bg-gray">
-				<div className="bg-black-violet h-full w-full flex flex-col items-center justify-between rounded-[25px] p-[30px] back">
+				<div className="bg-black-violet h-full w-full flex flex-col items-center justify-between rounded-[25px] p-5 back">
 					<div className="flex items-center justify-center h-full w-full">
 						<Image
 							src={`${process.env.API_URL}/icons/${service.img}`}

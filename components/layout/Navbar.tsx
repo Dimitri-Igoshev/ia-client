@@ -20,7 +20,7 @@ export const Navbar: FunctionComponent<NavbarProps> = () => {
 	};
 
 	return (
-		<header className="fixed left-0 top-0 w-full h-[60px] sm:h-[80px] px-5 sm:px-[30px] flex justify-between items-center z-30 bg-black">
+		<header className="fixed left-0 top-0 w-full h-[50px] sm:h-[80px] px-5 sm:px-[30px] flex justify-between items-center z-30 bg-black">
 			<Link href={`/`}>
 				<div className="flex items-center cursor-pointer">
 					<div className="relative overflow-hidden w-5 h-5 sm:w-[30px] sm:h-[30px]">

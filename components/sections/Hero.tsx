@@ -26,7 +26,7 @@ export const Hero = async () => {
 
 				<div className="flex justify-center lg:justify-end items-center h-full w-full">
 					<div
-						className="cursor-pointer -mt-[100px] sm:mt-0 w-[370px] h-[370px] md:w-[700px] md:h-[700px] lg:w-[550px] lg:h-[550px] xl:w-[700px] xl:h-[700px] 2xl:h-[800px] 2xl:w-[800px]">
+						className="cursor-pointer -mt-[100px] sm:mt-0 w-[400px] h-[400px] md:w-[700px] md:h-[700px] lg:w-[550px] lg:h-[550px] xl:w-[700px] xl:h-[700px] 2xl:h-[800px] 2xl:w-[800px]">
 						<EarthCanvas/>
 					</div>
 				</div>
