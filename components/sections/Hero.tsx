@@ -15,7 +15,12 @@ export const Hero = async () => {
 					className="absolute top-0 left-0 xs:mt-[100px] sm:mt-0 px-[20px] h-screen xs:w-full lg:w-[60%] xl:w-[65%] 2xl:w-[60%] flex flex-col justify-center z-10">
 					<h1 className="text-xl sm:text-2xl lg:text-2xl xl:text-3xl 2xl:text-3xl font-semibold xs:text-center sm:text-left">{t('usp')}</h1>
 					<div className="flex flex-row xs:justify-center sm:justify-start">
-						<Button size="m" className="mt-[40px]">{t('button')}</Button>
+						<div className='flex sm:hidden'>
+							<Button size="m" className="mt-[40px]">{t('button')}</Button>
+						</div>
+						<div className='hidden sm:flex'>
+							<Button size="l" className="mt-[40px]">{t('button')}</Button>
+						</div>
 					</div>
 				</div>
 
