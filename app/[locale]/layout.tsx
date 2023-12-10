@@ -20,7 +20,7 @@ export default async function RootLayout({ children, params: { locale } }: any) 
 	return (
 		<html lang={locale}>
 			<body className={font.className}>
-      <NextIntlClientProvider locale={locale || 'de'} messages={(await import(`@/i18n/${locale || 'de'}.json`)).default}>
+      <NextIntlClientProvider locale={locale || 'en'} messages={(await import(`@/i18n/${locale || 'en'}.json`)).default}>
 				<div className="relative">
           <Navbar />
           {children}

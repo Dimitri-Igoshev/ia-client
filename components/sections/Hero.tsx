@@ -6,7 +6,7 @@ import { Button } from "@/components/ui";
 import { EarthCanvas } from "../canvas";
 import Image from "next/image";
 
-export const Hero = async () => {
+export const Hero = () => {
 	const t = useTranslations("Hero");
 
 	return (

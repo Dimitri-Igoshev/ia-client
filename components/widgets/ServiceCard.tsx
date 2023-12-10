@@ -54,7 +54,7 @@ export const ServiceCard = ({ service, index }: ServiceCardProps) => {
 					<div className="mt-[10px] flex flex-wrap justify-between items-center w-full gap-3">
 						<div className="text-base font-light">
 							{t("from")}
-							<span className="text-xl font-semibold text-[22px]">
+							<span className="text-xl font-semibold">
 								{" "}
 								{service.price[locale]}
 							</span>
