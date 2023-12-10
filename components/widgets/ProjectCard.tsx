@@ -29,11 +29,11 @@ export const ProjectCard = ({ project }: ProjectCardProps) => {
 	const locale = useLocale();
 	const [isMobile, setIsMobile] = useState(false)
 
-	useEffect(() => {
-		if (!window) return
+	// useEffect(() => {
+	// 	if (!window) return
 	
-		setIsMobile(window.innerWidth < 620)
-	}, [])
+	// 	setIsMobile(window.innerWidth < 620)
+	// }, [])
 	
 
 	return (
@@ -73,8 +73,7 @@ export const ProjectCard = ({ project }: ProjectCardProps) => {
 										muted
 										playsInline
 										className="rounded-[25px]"
-										// @ts-ignore
-										autoPlay={isMobile}
+										autoPlay
 									></video>
 								</div>
 							</Tilt>
