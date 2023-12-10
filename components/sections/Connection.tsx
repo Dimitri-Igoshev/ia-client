@@ -15,7 +15,7 @@ export const Connection = () => {
 
 	return (
 		<Section hash="connection" full={true} className="relative overflow-hidden">
-			<div className="mt-0 sm:mt-[50px] container mx-auto">
+			<div className="mt-0 sm:mt-[50px] md:container md:mx-auto">
 				<div className="mt-6 xl:mt-8 2xl:mt-[40px] grid grid-cols-1 md:grid-cols-2">
 					<motion.div
 						variants={slideIn('left', 'tween', 0.2, 0.75)}

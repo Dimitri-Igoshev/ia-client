@@ -225,7 +225,7 @@ export const Form = ({
 												}),
 											}}
 										/>
-										<div className="absolute top-[50px] left-0 text-primary text-base font-light">
+										<div className="absolute top-[36px] md:top-[50px] left-0 text-primary text-base font-light">
 											{!isValid && touchedFields.email && (
 												<span>{t("emailError")}</span>
 											)}

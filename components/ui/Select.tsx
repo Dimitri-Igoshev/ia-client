@@ -25,7 +25,7 @@ export const Select = ({ value, setValue, options, className, ...props }: InputP
 	const [opened, setOpened] = useState(false)
 
 	return (
-		<div className="w-full h-full relative">
+		<div className="w-full relative">
 			<input
 				className={cn('bg-transparent text-lg md:text-xl font-light w-full border-b border-white pb-[5px] outline-none', className)}
 				// @ts-ignore
