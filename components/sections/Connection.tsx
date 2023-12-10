@@ -6,6 +6,7 @@ import Image from 'next/image'
 import { Form } from '@/components/widgets'
 import { motion } from 'framer-motion'
 import { slideIn } from '@/utils/motion'
+import { API_URL } from '@/config/env'
 
 export const Connection = () => {
 	const t = useTranslations('Connection')
@@ -19,7 +20,7 @@ export const Connection = () => {
 						className="flex justify-center items-center w-1/2 group"
 					>
 						<Image
-							src="/images/falcon9.png" alt="rocket" width={150} height={700}
+							src={`${API_URL}/images/falcon9.png`} alt="rocket" width={150} height={700}
 							className="-mt-[80px] -ml-[100px] group-hover:scale-110 group-hover:rotate-12 transition-all duration-1000"
 						/>
 					</motion.div>
