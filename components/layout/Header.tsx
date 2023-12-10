@@ -16,7 +16,7 @@ export const Header = ({ text, className, ...props }: HeaderProps) => {
 	return (
 		<motion.div variants={textVariant()}>
 			<h2
-				className={cn('text-white inline-block text-1xl sm:text-2xl font-thin', className)}
+				className={cn('text-white inline-block text-1xl sm:text-2xl font-semibold', className)}
 				{...props}
 			>
 				{firstWord}
