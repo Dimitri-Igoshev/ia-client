@@ -22,9 +22,9 @@ export const services = [
 			ru: 'Сайт с высокой конверсией, для продвижение одного продукта или услуги',
 		},
 		price: {
-			en: "$ 499",
-			de: "€ 499",
-			ru: "39'000 ₽"
+			en: "$ 699",
+			de: "€ 699",
+			ru: "69'000 ₽"
 		},
 		img: 'promo.svg',
 		size: 150,
@@ -45,7 +45,7 @@ export const services = [
 		price: {
 			en: "$ 999",
 			de: "€ 999",
-			ru: "79'000 ₽"
+			ru: "99'000 ₽"
 		},
 		img: 'corporate.svg',
 		size: 128,
@@ -64,9 +64,9 @@ export const services = [
 			ru: 'Интернет магазин или маркетплейс для продажи ваших товаров',
 		},
 		price: {
-			en: "$ 1'499",
-			de: "€ 1'499",
-			ru: "119'000 ₽"
+			en: "$ 1'999",
+			de: "€ 1'999",
+			ru: "199'000 ₽"
 		},
 		img: 'ecommerce.svg',
 		size: 125,
@@ -85,9 +85,9 @@ export const services = [
 			ru: 'Интернет портал или онлайн сервис со всем необходимым функционалом',
 		},
 		price: {
-			en: "$ 1'999",
-			de: "€ 1'999",
-			ru: "159'000 ₽"
+			en: "$ 2'999",
+			de: "€ 2'999",
+			ru: "299'000 ₽"
 		},
 		img: 'portals.svg',
 		size: 139,
@@ -108,7 +108,7 @@ export const services = [
 		price: {
 			en: "$ 1'999",
 			de: "€ 1'999",
-			ru: "159'000 ₽"
+			ru: "199'000 ₽"
 		},
 		img: 'mobile.svg',
 		size: 136,
@@ -129,7 +129,7 @@ export const services = [
 		price: {
 			en: "$ 99",
 			de: "€ 99",
-			ru: "7'900 ₽"
+			ru: "9'900 ₽"
 		},
 		img: 'promotion.svg',
 		size: 150,
@@ -150,7 +150,7 @@ export const services = [
 		price: {
 			en: "$ 2'999",
 			de: "€ 2'999",
-			ru: "239'000 ₽"
+			ru: "299'000 ₽"
 		},
 		img: 'marketing.svg',
 		size: 140,
@@ -169,9 +169,9 @@ export const services = [
 			ru: 'Обслуживание вашего сайта или приложения 24/7, домен, хостинг, безопасность',
 		},
 		price: {
-			en: "$ 19",
-			de: "€ 19",
-			ru: "1'590 ₽"
+			en: "$ 9",
+			de: "€ 9",
+			ru: "990 ₽"
 		},
 		img: 'hosting.svg',
 		size: 135,
