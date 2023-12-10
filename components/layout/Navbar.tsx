@@ -8,6 +8,7 @@ import { Menu } from "@/components/layout";
 import { Button, Language } from "../ui";
 import { HiOutlineMenu } from "react-icons/hi";
 import MobileMenu from "./MobileMenu";
+import { API_URL } from "@/config/env";
 
 interface NavbarProps {}
 
@@ -32,7 +33,7 @@ export const Navbar: FunctionComponent<NavbarProps> = () => {
 			<Link href={`/`}>
 				<div className="flex items-center cursor-pointer">
 					<Image
-						src={`${process.env.API_URL}/icons/logo.svg`}
+						src={`${API_URL}/icons/logo.svg`}
 						alt="Logo"
 						width={24}
 						height={24}

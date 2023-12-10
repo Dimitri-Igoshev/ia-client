@@ -7,6 +7,7 @@ import { motion } from "framer-motion";
 import { Tilt } from "react-tilt";
 import Link from "next/link";
 import { useLocale } from "next-intl";
+import { API_URL } from "@/config/env"
 
 // export interface Project {
 // 	id: number
@@ -53,7 +54,7 @@ export const ProjectCard = ({ project }: ProjectCardProps) => {
 							>
 								<div className="rounded-[25px]">
 									<video
-										src={`https://api.igoshev.de/${project.video}`}
+										src={`${API_URL}/${project.video}`}
 										width="100%"
 										height="530"
 										// @ts-ignore
@@ -64,6 +65,7 @@ export const ProjectCard = ({ project }: ProjectCardProps) => {
 										muted
 										playsInline
 										className="rounded-[25px]"
+										// @ts-ignore
 										autoPlay={window.innerWidth < 620}
 									></video>
 								</div>
@@ -79,7 +81,7 @@ export const ProjectCard = ({ project }: ProjectCardProps) => {
 							>
 								<div className="overflow-hidden rounded-[25px] w-full h-[210px] sm:h-[338px] md:h-[410px] lg:h-[260px] xl:h-[333px] 2xl:h-[404px] relative">
 									<Image
-										src={`https://api.igoshev.de/${project.img}`}
+										src={`${API_URL}/${project.img}`}
 										alt={project.title[locale]}
 										fill
 										className="group-hover/img:scale-150 group-hover/img:rotate-12 transition-all duration-1000 ease-out"

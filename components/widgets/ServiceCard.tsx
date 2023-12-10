@@ -8,6 +8,7 @@ import { Button } from "@/components/ui";
 import Image from "next/image";
 import Link from "next/link";
 import { useLocale } from "next-intl";
+import { API_URL } from "@/config/env"
 
 interface ServiceCardProps
 	extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {
@@ -28,7 +29,7 @@ export const ServiceCard = ({ service, index }: ServiceCardProps) => {
 				<div className="bg-black-violet h-full w-full flex flex-col items-center justify-between rounded-[25px] p-5 back">
 					<div className="flex items-center justify-center h-full w-full">
 						<Image
-							src={`${process.env.API_URL}/icons/${service.img}`}
+							src={`${API_URL}/icons/${service.img}`}
 							alt={service.title[locale]}
 							width={service.size}
 							height={service.size}
