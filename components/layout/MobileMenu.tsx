@@ -24,12 +24,6 @@ const MobileMenu: FunctionComponent<MobileMenuProps> = ({
 	const router = useRouter();
 	const t = useTranslations("Navbar");
 
-   useEffect(() => {
-    isOpen 
-    ? document.getElementsByTagName("body")[0].style.overflow = "hidden" 
-    : document.getElementsByTagName("body")[0].style.overflow = "scroll"
-  }, [isOpen]);
-
 	return (
 		<>
 			{isOpen && (

@@ -1,6 +1,6 @@
 "use client";
 
-import { FunctionComponent, useState } from "react";
+import { FunctionComponent, useEffect, useState } from "react";
 import { useTranslations } from "use-intl";
 import Link from "next/link";
 import Image from "next/image";
@@ -16,6 +16,12 @@ export const Navbar: FunctionComponent<NavbarProps> = () => {
 
 	const [isMenu, setIsMenu] = useState(false);
 	const [isModal, setIsModal] = useState(false);
+
+	useEffect(() => {
+    isMenu
+    ? document.getElementsByTagName("body")[0].style.overflow = "hidden" 
+    : document.getElementsByTagName("body")[0].style.overflow = "scroll"
+  }, [isMenu]);
 
 	const closeModal = () => {
 		setIsModal(false);
