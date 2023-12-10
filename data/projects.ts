@@ -31,7 +31,7 @@ export const projects = [
 		desc: {
 			en: 'Development of a website for an electronic cigarette manufacturer',
 			de: 'Entwicklung der Website des Unternehmens an einen Hersteller von elektronischen Zigaretten',
-			ru: 'Разработка веб сайта компании производителю электронных сигарет',
+			ru: 'Разработка веб сайта компании производителя электронных сигарет',
 		},
 		tags: {
 			en: ['online store', 'attracting customers', 'design'],
