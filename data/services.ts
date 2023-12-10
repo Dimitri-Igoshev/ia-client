@@ -164,9 +164,9 @@ export const services = [
 			ru: 'Обслуживание, домен, хостинг',
 		},
 		desc: {
-			en: '24/7 maintenance of your website/application, domain, hosting, security',
-			de: 'Wartung Ihrer Website/Anwendung 24/7, Domain, Hosting, Sicherheit',
-			ru: 'Обслуживание вашего сайта/приложения 24/7, домен, хостинг, безопасность',
+			en: '24/7 maintenance of your website or application, domain, hosting, security',
+			de: 'Wartung Ihrer Website oder Anwendung 24/7, Domain, Hosting, Sicherheit',
+			ru: 'Обслуживание вашего сайта или приложения 24/7, домен, хостинг, безопасность',
 		},
 		price: {
 			en: "$ 19",

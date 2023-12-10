@@ -31,12 +31,12 @@ export const Navbar: FunctionComponent<NavbarProps> = () => {
 		<header className="fixed left-0 top-0 w-full h-[50px] sm:h-[80px] px-5 sm:px-[30px] flex justify-between items-center z-30 bg-black">
 			<Link href={`/`}>
 				<div className="flex items-center cursor-pointer">
-						<Image
-							src={`${process.env.API_URL}/icons/logo.svg`}
-							alt="Logo"
-							width={24}
-							height={24}
-						/>
+					<Image
+						src={`${process.env.API_URL}/icons/logo.svg`}
+						alt="Logo"
+						width={24}
+						height={24}
+					/>
 
 					<span className="ml-[10px] mt-px uppercase font-bold text-md sm:text-xl">
 						Igoshev
@@ -57,8 +57,8 @@ export const Navbar: FunctionComponent<NavbarProps> = () => {
 				<HiOutlineMenu
 					className="cursor-pointer text-1xl flex lg:hidden hover:text-primary"
 					onClick={() => {
-						setIsMenu(true)
-						document.body.style.overflow = "hidden"
+						setIsMenu(true);
+						document.body.style.overflow = "hidden";
 					}}
 				/>
 			</div>

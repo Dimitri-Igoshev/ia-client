@@ -8,20 +8,20 @@ export const menu = [
 	{
 		id: 1,
 		title: {
-			en: 'Projects',
-			de: 'Proekte',
-			ru: 'Проекты',
-		},
-		path: '#projects'
-	},
-	{
-		id: 2,
-		title: {
 			en: 'Services',
 			de: 'Leistungen',
 			ru: 'Услуги',
 		},
 		path: '#services'
+	},
+	{
+		id: 2,
+		title: {
+			en: 'Projects',
+			de: 'Proekte',
+			ru: 'Проекты',
+		},
+		path: '#projects'
 	},
 	{
 		id: 3,
