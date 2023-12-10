@@ -66,7 +66,7 @@ export const ProjectCard = ({ project }: ProjectCardProps) => {
 										playsInline
 										className="rounded-[25px]"
 										// @ts-ignore
-										// autoPlay={window.innerWidth < 620}
+										autoPlay={window.innerWidth < 620}
 									></video>
 								</div>
 							</Tilt>
