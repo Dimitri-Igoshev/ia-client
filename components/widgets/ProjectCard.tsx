@@ -1,6 +1,6 @@
 "use client";
 
-import { DetailedHTMLProps, HTMLAttributes } from "react";
+import { DetailedHTMLProps, HTMLAttributes, useEffect, useState } from "react";
 import Image from "next/image";
 import { slideIn, staggerContainer } from "@/utils/motion";
 import { motion } from "framer-motion";
@@ -27,6 +27,14 @@ interface ProjectCardProps
 
 export const ProjectCard = ({ project }: ProjectCardProps) => {
 	const locale = useLocale();
+	const [isMobile, setIsMobile] = useState(false)
+
+	useEffect(() => {
+		if (!window) return
+	
+		setIsMobile(window.innerWidth < 620)
+	}, [])
+	
 
 	return (
 		<motion.div
@@ -66,7 +74,7 @@ export const ProjectCard = ({ project }: ProjectCardProps) => {
 										playsInline
 										className="rounded-[25px]"
 										// @ts-ignore
-										autoPlay={window.innerWidth < 620}
+										autoPlay={isMobile}
 									></video>
 								</div>
 							</Tilt>
