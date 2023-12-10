@@ -1,8 +1,7 @@
 "use client";
 
 import { menu } from "@/data/menu";
-import Link from "next/link";
-import { FunctionComponent, useEffect } from "react";
+import { FunctionComponent} from "react";
 import { AiOutlineClose } from "react-icons/ai";
 import { useLocale } from "next-intl";
 import loc from "@/utils/localType";
@@ -24,9 +23,11 @@ const MobileMenu: FunctionComponent<MobileMenuProps> = ({
 	const router = useRouter();
 	const t = useTranslations("Navbar");
 
-	useEffect(() => {
-		document.body.style.overflow = "hidden"
-	}, [t])
+	const close = () => {
+		onClose()
+		document.body.style.overflow = "scroll"
+	}
+	
 
 	return (
 		<>
@@ -34,7 +35,7 @@ const MobileMenu: FunctionComponent<MobileMenuProps> = ({
 				<div className="fixed top-0 left-0 z-50 w-full h-full flex flex-col justify-center gap-6 p-6 bg-black text-xl overflow-y-hidden">
 					<AiOutlineClose
 						className="text-1xl fixed top-[9px] right-5 cursor-pointer hover:text-primary"
-						onClick={onClose}
+						onClick={close}
 					/>
 
 					<div className="flex justify-center">
@@ -50,7 +51,7 @@ const MobileMenu: FunctionComponent<MobileMenuProps> = ({
 								className="font-semibold uppercase hover:text-primary"
 								onClick={() => {
 									router.push(`/${locale}/${item.path}`);
-									onClose();
+									close();
 								}}
 							>
 								{item.title[loc(locale)]}

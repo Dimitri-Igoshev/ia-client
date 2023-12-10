@@ -58,7 +58,10 @@ export const Navbar: FunctionComponent<NavbarProps> = () => {
 				</Button>
 				<HiOutlineMenu
 					className="cursor-pointer text-1xl flex lg:hidden hover:text-primary"
-					onClick={() => setIsMenu(true)}
+					onClick={() => {
+						setIsMenu(true)
+						document.body.style.overflow = "hidden"
+					}}
 				/>
 			</div>
 
