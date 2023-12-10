@@ -102,7 +102,7 @@ export const projects = [
 		},
 		video: 'videos/nataniel.mp4',
 		img: '',
-		link: 'https://highlife.ru',
+		link: 'https://salonnataniel.ru/',
 		path: '/'
 
 	},
