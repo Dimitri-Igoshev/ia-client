@@ -40,28 +40,28 @@ export const About = () => {
 			const controls = animate(year, info[0].value, { duration: 3 })
 			return controls.stop
 		}
-	}, [isInView])
+	}, [isInView, year])
 
 	useEffect(() => {
 		if (isInView) {
 			const controls = animate(office, info[1].value, { duration: 3 })
 			return controls.stop
 		}
-	}, [isInView])
+	}, [isInView, office])
 
 	useEffect(() => {
 		if (isInView) {
 			const controls = animate(project, info[2].value, { duration: 3 })
 			return controls.stop
 		}
-	}, [isInView])
+	}, [isInView, project])
 
 	useEffect(() => {
 		if (isInView) {
 			const controls = animate(employee, info[3].value, { duration: 3 })
 			return controls.stop
 		}
-	}, [isInView])
+	}, [isInView, employee])
 
 	return (
 		<div ref={ref}>

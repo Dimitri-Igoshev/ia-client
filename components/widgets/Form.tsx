@@ -12,6 +12,8 @@ import { DetailedHTMLProps, HTMLAttributes, useRef, useState } from "react";
 import axios from "axios";
 import { useTranslations } from "use-intl";
 import cn from "classnames";
+import useIsMobile from "@/hooks/useIsMobile";
+import FormWrapper from "./FormWrapper";
 
 interface FormProps
 	extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {
@@ -189,16 +191,12 @@ export const Form = ({
 					["w-full"]: !isModal,
 				})}
 			>
-				<Tilt
-					options={{
-						max: 15,
-						speed: 1000,
-					}}
-					className="transition-all duration-500 ease-in"
-				>
-					{hasTitle && <h3 className="text-3xl font-bold">{t("question")}</h3>}
+				<FormWrapper>
+					{hasTitle && (
+						<h3 className="text-1xl md:text-3xl font-bold">{t("question")}</h3>
+					)}
 					<form
-						className="flex flex-col mt-[100px] px-[50px] py-[80px] mb-[100px] bg-gray rounded-[25px] w-full gap-[70px] min-h-[670px]"
+						className="flex flex-col mt-5 md:mt-[100px] px-10 md:px-[50px] py-12 md:py-[80px] mb-[50px] md:mb-[100px] bg-gray rounded-[25px] w-full gap-8 md:gap-[70px] h-full md:min-h-[670px]"
 						onSubmit={handleSubmit(onSubmit)}
 					>
 						{!hasTitle && (
@@ -215,7 +213,7 @@ export const Form = ({
 									register={{ ...register("name") }}
 									placeholder={t("name")}
 								/>
-								<div className="flex justify-between gap-[35px]">
+								<div className="grid grid-cols-1 md:grid-cols-2 gap-[35px]">
 									<div className="relative w-full">
 										<Input
 											type="email"
@@ -241,7 +239,7 @@ export const Form = ({
 										}}
 									/>
 								</div>
-								<div className="flex justify-between gap-[35px]">
+								<div className="grid grid-cols-1 md:grid-cols-2 gap-[35px]">
 									<Select
 										options={typeOptions}
 										// @ts-ignore
@@ -265,7 +263,6 @@ export const Form = ({
 										// @ts-ignore
 										onClick={() => ref.current.click()}
 									>
-										
 										{!file ? (
 											<>
 												<input
@@ -276,7 +273,7 @@ export const Form = ({
 													className="invisible absolute"
 												/>
 												<AiOutlinePaperClip className="text-xl" />
-												<div className="ml-[15px] text-xl font-light">
+												<div className="ml-[15px] text-lg md:text-xl font-light">
 													{t("attachment")}
 												</div>
 											</>
@@ -290,9 +287,14 @@ export const Form = ({
 											</div>
 										)}
 									</div>
-									<Button size="l" type="submit">
+									<Button size="l" type="submit" className="hidden md:flex">
 										{t("button")}
 									</Button>
+									<div className="flex w-full md:hidden">
+										<Button size="m" theme="filled" type="submit" className="w-full">
+											{t("button")}
+										</Button>
+									</div>
 								</div>
 							</>
 						)}
@@ -319,7 +321,7 @@ export const Form = ({
 							</div>
 						)}
 					</form>
-				</Tilt>
+				</FormWrapper>
 			</div>
 		</div>
 	);

@@ -27,7 +27,7 @@ export const Select = ({ value, setValue, options, className, ...props }: InputP
 	return (
 		<div className="w-full h-full relative">
 			<input
-				className={cn('bg-transparent text-xl font-light w-full border-b border-white pb-[5px] outline-none', className)}
+				className={cn('bg-transparent text-lg md:text-xl font-light w-full border-b border-white pb-[5px] outline-none', className)}
 				// @ts-ignore
 				defaultValue={value.title}
 				{...props}
@@ -45,9 +45,9 @@ export const Select = ({ value, setValue, options, className, ...props }: InputP
 					initial="hidden"
 					animate="visible"
 					variants={variants}
-					className="absolute w-full z-10 bg-black text-white mt-[1rem] text-xl font-light rounded-[5px] overflow-hidden"
+					className="absolute w-full z-10 bg-black text-white mt-[1rem] text-lg md:text-xl font-light rounded-[5px] overflow-hidden"
 				>
-					<div className="flex flex-col">
+					<div className="flex flex-col py-2">
 						{options && options.map(option => (
 							<span
 								key={option.value}
