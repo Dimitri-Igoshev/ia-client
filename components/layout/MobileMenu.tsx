@@ -2,12 +2,14 @@
 
 import { menu } from "@/data/menu";
 import Link from "next/link";
-import { FunctionComponent } from "react";
+import { FunctionComponent, useEffect } from "react";
 import { AiOutlineClose } from "react-icons/ai";
 import { useLocale } from "next-intl";
 import loc from "@/utils/localType";
 import { useRouter } from "next/navigation";
-import { MdOutlineLanguage } from 'react-icons/md'
+import { MdOutlineLanguage } from "react-icons/md";
+import { Button } from "../ui";
+import { useTranslations } from "use-intl";
 
 interface MobileMenuProps {
 	isOpen: boolean;
@@ -20,21 +22,38 @@ const MobileMenu: FunctionComponent<MobileMenuProps> = ({
 }) => {
 	const locale = useLocale();
 	const router = useRouter();
+	const t = useTranslations("Navbar");
+
+   useEffect(() => {
+    isOpen 
+    ? document.getElementsByTagName("body")[0].style.overflow = "hidden" 
+    : document.getElementsByTagName("body")[0].style.overflow = "scroll"
+
+    return () => {
+      document.getElementsByTagName("body")[0].style.overflow = "scroll"
+    };
+  }, [isOpen]);
 
 	return (
 		<>
 			{isOpen && (
-				<div className="fixed top-0 left-0 z-50 w-screen min-h-screen flex flex-col justify-center gap-6 p-6 bg-primary text-1xl">
+				<div className="fixed top-0 left-0 z-50 w-screen h-screen flex flex-col justify-center gap-6 p-6 bg-black text-xl">
 					<AiOutlineClose
-						className="fixed top-6 right-6 cursor-pointer hover:text-black"
+						className="fixed top-5 right-5 cursor-pointer hover:text-primary"
 						onClick={onClose}
 					/>
+
+					<div className="flex justify-center">
+						<Button theme="filled" size="l" className="mb-9">
+							{t("button")}
+						</Button>
+					</div>
 
 					<div className="flex flex-col items-center gap-6">
 						{menu.map((item) => (
 							<p
 								key={item.id}
-								className="font-semibold uppercase "
+								className="font-semibold uppercase hover:text-primary"
 								onClick={() => {
 									router.push(`/${locale}/${item.path}`);
 									onClose();
@@ -45,12 +64,27 @@ const MobileMenu: FunctionComponent<MobileMenuProps> = ({
 						))}
 					</div>
 
-          <div className="flex items-center justify-center gap-4 mt-6">
-            <MdOutlineLanguage className="text-xl" />
-            <p className="cursor-pointer text-lg" onClick={() => window.open(`/en`, '_self')}>En</p>
-            <p className="cursor-pointer text-lg" onClick={() => window.open(`/de`, '_self')}>De</p>
-            <p className="cursor-pointer text-lg" onClick={() => window.open(`/ru`, '_self')}>Ru</p>
-          </div>
+					<div className="flex items-center justify-center gap-4 mt-9">
+						<MdOutlineLanguage className="text-xl text-primary" />
+						<p
+							className="cursor-pointer text-lg hover:text-primary"
+							onClick={() => window.open(`/en`, "_self")}
+						>
+							En
+						</p>
+						<p
+							className="cursor-pointer text-lg hover:text-primary"
+							onClick={() => window.open(`/de`, "_self")}
+						>
+							De
+						</p>
+						<p
+							className="cursor-pointer text-lg hover:text-primary"
+							onClick={() => window.open(`/ru`, "_self")}
+						>
+							Ru
+						</p>
+					</div>
 				</div>
 			)}
 		</>
