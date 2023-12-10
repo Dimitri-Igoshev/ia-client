@@ -18,10 +18,10 @@ export const Navbar: FunctionComponent<NavbarProps> = () => {
 	const [isModal, setIsModal] = useState(false);
 
 	useEffect(() => {
-    isMenu
-    ? document.getElementsByTagName("body")[0].style.overflow = "hidden" 
-    : document.getElementsByTagName("body")[0].style.overflow = "scroll"
-  }, [isMenu]);
+		isMenu
+			? (document.body.style.overflow = "hidden")
+			: (document.body.style.overflow = "scroll");
+	}, [isMenu]);
 
 	const closeModal = () => {
 		setIsModal(false);
@@ -56,10 +56,13 @@ export const Navbar: FunctionComponent<NavbarProps> = () => {
 				>
 					{t("button")}
 				</Button>
-				<HiOutlineMenu className="cursor-pointer text-1xl flex lg:hidden hover:text-primary" onClick={() => setIsMenu(true)} />
+				<HiOutlineMenu
+					className="cursor-pointer text-1xl flex lg:hidden hover:text-primary"
+					onClick={() => setIsMenu(true)}
+				/>
 			</div>
 
-			<MobileMenu isOpen={isMenu} onClose={() => setIsMenu(false)}/>
+			<MobileMenu isOpen={isMenu} onClose={() => setIsMenu(false)} />
 		</header>
 	);
 };
