@@ -1,7 +1,7 @@
 export * from './Section'
 export * from './Hero'
 export * from './Services'
-// export * from './Projects'
+export * from './Projects'
 // export * from './About'
 // export * from './Connection'
 // export * from './Contacts'
