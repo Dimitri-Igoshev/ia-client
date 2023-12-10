@@ -8,16 +8,16 @@ import { Tilt } from 'react-tilt'
 import Link from 'next/link'
 import { useLocale } from "next-intl";
 
-export interface Project {
-	id: number
-	title: string
-	desc: string,
-	tags: string[]
-	video?: string
-	img?: string,
-	link: string,
-	path: string
-}
+// export interface Project {
+// 	id: number
+// 	title: string
+// 	desc: string,
+// 	tags: string[]
+// 	video?: string
+// 	img?: string,
+// 	link: string,
+// 	path: string
+// }
 
 interface ProjectCardProps extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {
 	project: any
@@ -35,8 +35,8 @@ export const ProjectCard = ({ project }: ProjectCardProps) => {
 			viewport={{ once: true, amount: 0.25 }}
 		>
 			<motion.div key={project.id} variants={slideIn('down', 'tween', 0.2, 0.75)}>
-				<div className="flex flex-col w-[70rem]">
-					<div className="relative rounded-[2.5rem] cursor-pointer group/img">
+				<div className="flex flex-col w-full">
+					<div className="relative rounded-[25px] cursor-pointer group/img">
 						{/*<div className="absolute z-20 top-0 left-0 w-full h-full flex items-center justify-center bg-black-violet/20" />*/}
 						{project.video ? (
 							<Tilt
@@ -45,13 +45,13 @@ export const ProjectCard = ({ project }: ProjectCardProps) => {
 									scale: 1.1,
 									speed: 1000
 								}}
-								className="rounded-[2.5rem] transition-all duration-500 ease-in bg-gray"
+								className="rounded-[25px] transition-all duration-500 ease-in bg-gray"
 							>
 								<Link href={project.link} target="_blank">
-									<div className="rounded-[2.5rem]">
+									<div className="rounded-[25px]">
 										<video
 											src={`https://api.igoshev.de/${project.video}`}
-											width="700"
+											width="100%"
 											height="530"
 											// @ts-ignore
 											onMouseOver={event => event.target.play()}
@@ -60,7 +60,7 @@ export const ProjectCard = ({ project }: ProjectCardProps) => {
 											loop
 											muted
 											playsInline
-											className="rounded-[2.5rem]"
+											className="rounded-[25px]"
 										>
 										</video>
 									</div>
@@ -73,15 +73,14 @@ export const ProjectCard = ({ project }: ProjectCardProps) => {
 									scale: 1.1,
 									speed: 1000
 								}}
-								className="rounded-[2.5rem] transition-all duration-500 ease-in bg-gray"
+								className="rounded-[25px] transition-all duration-500 ease-in bg-gray"
 							>
 								<Link href={project.link} target="_blank">
-									<div className="overflow-hidden rounded-[2.5rem]">
+									<div className="overflow-hidden rounded-[25px] w-full h-[200px] sm:h-[338px] md:h-[410px] lg:h-[260px] xl:h-[333px] 2xl:h-[404px] relative">
 										<Image
 											src={`https://api.igoshev.de/${project.img}`}
 											alt={project.title[locale]}
-											width={700}
-											height={392}
+											fill
 											className="group-hover/img:scale-150 group-hover/img:rotate-12 transition-all duration-1000 ease-out"
 										/>
 									</div>
@@ -89,15 +88,15 @@ export const ProjectCard = ({ project }: ProjectCardProps) => {
 							</Tilt>
 						)}
 					</div>
-					<div className="mt-[3rem] ">
+					<div className="mt-[30px] ">
 				<span className="text-xl font-bold text-primary">
 				{project.title[locale]}
 			</span>
 					</div>
-					<span className="mt-[2rem] text-xl font-light">{project.desc[locale]}</span>
-					<div className="flex gap-[2rem] mt-[2.2rem]">
+					<span className="mt-[20px] text-xl font-light">{project.desc[locale]}</span>
+					<div className="flex gap-[20px] mt-[22px]">
 						{project.tags[locale].map((tag: any) => (
-							<span key={tag} className="text-base font-light">#{tag}</span>
+							<span key={tag} className="text-base font-light"><span className='text-primary'>#</span>{tag}</span>
 						))}
 					</div>
 				</div>
