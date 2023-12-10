@@ -4,7 +4,6 @@ import { Section } from "@/components/sections/Section";
 import { useTranslations } from "use-intl";
 import { Button } from "@/components/ui";
 import { EarthCanvas } from "../canvas";
-import Image from "next/image";
 
 export const Hero = () => {
 	const t = useTranslations("Hero");
@@ -13,7 +12,7 @@ export const Hero = () => {
 		<Section hash="hero" full={true} className="relative h-screen w-screen">
 			<div className="sm:container sm:mx-auto h-full w-full flex justify-between relative ">
 				<div className="absolute top-0 left-0 xs:mt-[100px] sm:mt-0 px-[20px] h-screen xs:w-full lg:w-[60%] xl:w-[65%] 2xl:w-[60%] flex flex-col justify-center z-10">
-					<h1 className="text-1xl sm:text-2xl lg:text-2xl xl:text-3xl 2xl:text-3xl font-semibold text-center sm:text-left">
+					<h1 className="text-1xl sm:text-2xl lg:text-2xl xl:text-3xl 2xl:text-3xl font-bold text-center sm:text-left">
 						{t("usp")}
 					</h1>
 					<div className="flex flex-row xs:justify-center sm:justify-start">

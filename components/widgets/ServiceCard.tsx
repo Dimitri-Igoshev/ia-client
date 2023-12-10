@@ -35,7 +35,7 @@ export const ServiceCard = ({ service, index }: ServiceCardProps) => {
 							height={service.size}
 						/>
 					</div>
-					<div className="flex text-xl font-semibold text-center min-h-[80px]">
+					<div className="flex text-xl font-bold text-center min-h-[80px]">
 						{service.title[locale]}
 					</div>
 				</div>
@@ -43,10 +43,10 @@ export const ServiceCard = ({ service, index }: ServiceCardProps) => {
 
 			<div className="absolute card-back top-0 left-0 w-full h-full rounded-[25px] primary-gradient p-1 overflow-hidden">
 				<div className="bg-gray h-full w-full flex flex-col items-center justify-between rounded-[25px] p-[30px] gap-3 back">
-					<div className="text-[22px] text-primary font-semibold flex justify-start w-full">{`0${
+					<div className="text-[22px] text-primary font-bold flex justify-start w-full">{`0${
 						index + 1
 					}.`}</div>
-					<div className="lg:text-lg 2xl:text-[22px] font-semibold flex justify-start w-full">
+					<div className="lg:text-lg 2xl:text-[22px] font-bold flex justify-start w-full">
 						{service.title[locale]}
 					</div>
 					<div className="lg:text-md 2xl:text-[22px] font-light flex justify-start w-full">
@@ -55,7 +55,7 @@ export const ServiceCard = ({ service, index }: ServiceCardProps) => {
 					<div className="mt-[10px] flex flex-wrap justify-between items-center w-full gap-3">
 						<div className="text-base font-light">
 							{t("from")}
-							<span className="text-xl font-semibold">
+							<span className="text-xl font-bold">
 								{" "}
 								{service.price[locale]}
 							</span>

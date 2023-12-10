@@ -48,7 +48,7 @@ const MobileMenu: FunctionComponent<MobileMenuProps> = ({
 						{menu.map((item) => (
 							<p
 								key={item.id}
-								className="font-semibold uppercase hover:text-primary"
+								className="font-bold uppercase hover:text-primary"
 								onClick={() => {
 									router.push(`/${locale}/${item.path}`);
 									close();

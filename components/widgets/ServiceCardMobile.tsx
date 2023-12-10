@@ -58,7 +58,7 @@ export const ServiceCardMobile: FunctionComponent<ServiceCardMobileProps> = ({
 
 						<div className="text-base font-light">
             {t("from")}
-							<span className="text-xl font-semibold">
+							<span className="text-xl font-bold">
 								{" "}
 								{service.price[locale]}
 							</span>
