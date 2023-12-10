@@ -17,11 +17,11 @@ export const Navbar: FunctionComponent<NavbarProps> = () => {
 	const [isMenu, setIsMenu] = useState(false);
 	const [isModal, setIsModal] = useState(false);
 
-	useEffect(() => {
-		isMenu
-			? (document.body.style.overflow = "hidden")
-			: (document.body.style.overflow = "scroll");
-	}, [isMenu]);
+	// useEffect(() => {
+	// 	isMenu
+	// 		? (document.body.style.overflow = "hidden")
+	// 		: (document.body.style.overflow = "scroll");
+	// }, [isMenu]);
 
 	const closeModal = () => {
 		setIsModal(false);
