@@ -14,6 +14,7 @@ import Image from "next/image";
 import { useTranslations } from "use-intl";
 import { Button } from "../ui"
 import Link from "next/link"
+import { API_URL } from "@/config/env"
 
 interface ServiceCardMobileProps
 	extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {
@@ -43,7 +44,7 @@ export const ServiceCardMobile: FunctionComponent<ServiceCardMobileProps> = ({
 			>
 				<div className="flex gap-6 items-center">
 					<Image
-						src={`${process.env.API_URL}/icons/${service.img}`}
+						src={`${API_URL}/icons/${service.img}`}
 						alt={service.title[locale]}
 						width={service.size / 3}
 						height={service.size / 3}
