@@ -16,11 +16,11 @@ export const Header = ({ text, className, ...props }: HeaderProps) => {
 	return (
 		<motion.div variants={textVariant()}>
 			<h2
-				className={cn('text-white inline-block text-1xl sm:text-2xl font-semibold', className)}
+				className={cn('text-white inline-block text-xl sm:text-2xl font-semibold', className)}
 				{...props}
 			>
-				{firstWord}
-				<span className='text-primary font-semibold'> {textArr.join(' ')}</span>
+				{/* {firstWord} */}
+				<span className='text-primary font-semibold uppercase'> {textArr.join(' ')}</span>
 			</h2>
 		</motion.div>
 	)

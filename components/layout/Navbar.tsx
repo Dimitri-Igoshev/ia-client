@@ -31,17 +31,15 @@ export const Navbar: FunctionComponent<NavbarProps> = () => {
 		<header className="fixed left-0 top-0 w-full h-[50px] sm:h-[80px] px-5 sm:px-[30px] flex justify-between items-center z-30 bg-black">
 			<Link href={`/`}>
 				<div className="flex items-center cursor-pointer">
-					<div className="relative overflow-hidden w-5 h-5 sm:w-[30px] sm:h-[30px]">
 						<Image
 							src={`${process.env.API_URL}/icons/logo.svg`}
 							alt="Logo"
-							objectFit="cover"
-							layout="fill"
+							width={24}
+							height={24}
 						/>
-					</div>
 
-					<span className="ml-[10px] uppercase font-semibold text-md sm:text-xl">
-						Igoshev Agency
+					<span className="ml-[10px] mt-px uppercase font-bold text-md sm:text-xl">
+						Igoshev
 					</span>
 				</div>
 			</Link>
