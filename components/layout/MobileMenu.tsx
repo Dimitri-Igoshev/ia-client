@@ -28,10 +28,6 @@ const MobileMenu: FunctionComponent<MobileMenuProps> = ({
     isOpen 
     ? document.getElementsByTagName("body")[0].style.overflow = "hidden" 
     : document.getElementsByTagName("body")[0].style.overflow = "scroll"
-
-    return () => {
-      document.getElementsByTagName("body")[0].style.overflow = "scroll"
-    };
   }, [isOpen]);
 
 	return (
