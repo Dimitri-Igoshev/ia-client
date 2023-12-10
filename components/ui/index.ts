@@ -1,5 +1,5 @@
 export * from './Button'
-// export * from './Input'
-// export * from './Select'
+export * from './Input'
+export * from './Select'
 export * from './Language'
-// export * from './Uploader'
+export * from './Uploader'
