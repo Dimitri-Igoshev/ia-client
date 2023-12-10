@@ -27,7 +27,7 @@ const MobileMenu: FunctionComponent<MobileMenuProps> = ({
 	return (
 		<>
 			{isOpen && (
-				<div className="fixed top-0 left-0 z-50 w-screen h-screen flex flex-col justify-center gap-6 p-6 bg-black text-xl py-[60px]">
+				<div className="fixed -bottom-[60px] top-0 left-0 z-50 w-screen min-h-screen flex flex-col justify-center gap-6 p-6 bg-black text-xl">
 					<AiOutlineClose
 						className="text-1xl fixed top-[9px] right-5 cursor-pointer hover:text-primary"
 						onClick={onClose}
