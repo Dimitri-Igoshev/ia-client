@@ -30,7 +30,6 @@ export const Select = ({ value, setValue, options, className }: InputProps) => {
 			<input
 				className={cn('bg-transparent text-lg md:text-xl font-light w-full border-b border-white pb-[5px] outline-none', className)}
 				value={value.title}
-				defaultValue={value.title}
 			/>
 			<div
 				className="absolute w-full h-[40px] flex justify-end top-0 md:top-[5px] right-0 text-base cursor-pointer"

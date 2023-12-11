@@ -178,7 +178,7 @@ export const Form = ({
 		setType(typeOptions[0]);
 		setService(developmentOptions[0]);
 		setFile(null);
-		reset()
+		reset();
 	};
 
 	return (
@@ -204,16 +204,19 @@ export const Form = ({
 						className="flex flex-col mt-5 md:mt-[100px] px-10 md:px-[50px] py-12 md:py-[80px] mb-[50px] md:mb-[100px] bg-gray rounded-[25px] w-full gap-8 md:gap-[70px] h-full md:min-h-[670px]"
 						onSubmit={handleSubmit(onSubmit)}
 					>
-						<div className="w-full flex justify-end -my-[20px] md:-my-[30px]">
-							<AiOutlineClose
-								className="cursor-pointer text-xl hover:text-primary transition-all duration-500"
-								onClick={() => {
-									setSent(false);
-									cleare();
-									close();
-								}}
-							/>
-						</div>
+						{(!loading && sent) || isModal ? (
+							<div className="w-full flex justify-end -my-[20px] md:-my-[30px]">
+								<AiOutlineClose
+									className="cursor-pointer text-xl hover:text-primary transition-all duration-500"
+									onClick={() => {
+										setSent(false);
+										cleare();
+										close();
+									}}
+								/>
+							</div>
+						) : null}
+
 						{!sent && !loading && (
 							<>
 								<Input
