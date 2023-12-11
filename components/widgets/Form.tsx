@@ -109,8 +109,8 @@ export const Form = ({
 	const [success, setSuccess] = useState<boolean>(false);
 	const [sent, setSent] = useState<boolean>(false);
 
-	const [type, setType] = useState<Option>({ ...typeOptions[0] });
-	const [service, setService] = useState<Option>({ ...developmentOptions[0] });
+	const [type, setType] = useState<Option>(typeOptions[0]);
+	const [service, setService] = useState<Option>(developmentOptions[0]);
 	const [file, setFile] = useState<any>(null);
 
 	const ref = useRef(null);
@@ -166,8 +166,8 @@ export const Form = ({
 		}
 	};
 
-	const setSelect = async (value: Option) => {
-		await setType(value);
+	const setSelect = (value: Option) => {
+		setType(value);
 
 		if (value.value === "development") setService({ ...developmentOptions[0] });
 		if (value.value === "design") setService({ ...deignOptions[0] });
@@ -243,13 +243,11 @@ export const Form = ({
 								<div className="grid grid-cols-1 md:grid-cols-2 gap-[35px]">
 									<Select
 										options={typeOptions}
-										// @ts-ignore
 										value={type}
 										setValue={setSelect}
 									/>
 									<Select
 										options={getServiceOptions()}
-										// @ts-ignore
 										value={service}
 										setValue={setService}
 									/>
@@ -300,7 +298,7 @@ export const Form = ({
 							</>
 						)}
 						{loading && (
-							<div className="flex justify-center items-center w-full h-[670px] text-xl">
+							<div className="flex justify-center items-center w-full h-auto md:h-[670px] text-base md:text-xl">
 								<div className="flex items-center">
 									<div className="loader" />
 									<div className="ml-[1rem] font-light">{t("sending")}</div>
@@ -308,13 +306,13 @@ export const Form = ({
 							</div>
 						)}
 						{!loading && success && sent && (
-							<div className="flex flex-col gap-[70px] justify-center items-start w-full h-[670px] text-xl">
-								<h3 className="text-2xl">{t("weStart")}</h3>
+							<div className="flex flex-col gap-6 md:gap-[70px] justify-center items-start w-full h-auto md:h-[670px] text-base md:text-xl">
+								<h3 className="text-1xl md:text-2xl">{t("weStart")}</h3>
 								<span className="font-light">{t("startText")}</span>
 							</div>
 						)}
 						{!loading && !success && sent && (
-							<div className="flex flex-col gap-[70px] justify-center items-start w-full h-[670px] text-xl">
+							<div className="flex flex-col gap-6 md:gap-[70px] justify-center items-start w-full h-auto md:h-[670px] text-base md:text-xl">
 								<h3 className="text-2xl">{t("submitError")}</h3>
 								<Button size="l" onClick={() => setSent(false)}>
 									{t("resend")}
