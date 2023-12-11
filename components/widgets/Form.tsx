@@ -14,6 +14,7 @@ import { useTranslations } from "use-intl";
 import cn from "classnames";
 import useIsMobile from "@/hooks/useIsMobile";
 import FormWrapper from "./FormWrapper";
+import { API_URL } from "@/config/env"
 
 interface FormProps
 	extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {
@@ -134,7 +135,7 @@ export const Form = ({
 
 		try {
 			const { data } = await axios.post(
-				`http://localhost:4000/api/order`,
+				`${API_URL}/application`,
 				formData
 			);
 			if (data) setSuccess(true);
