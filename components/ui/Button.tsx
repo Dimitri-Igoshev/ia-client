@@ -21,7 +21,7 @@ export const Button = ({ children, size = 'm', theme = 'outline', color = 'prima
 			},
 			className
 		)} { ...props } >
-			{children}
+			<div className="whitespace-nowrap">{children}</div>
 		</button>
 	)
 }

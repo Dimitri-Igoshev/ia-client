@@ -82,5 +82,10 @@
   "Contacts": {
     "header": "Unsere Kontakte",
     "contactUs": "Kontaktiere uns"
+  },
+  "Cookies": {
+    "header": "Cookies",
+    "text": "Diese Website verwendet Technologien von Drittanbietern zur Website-Verfolgung, um ihre Dienste anzubieten, diese kontinuierlich zu verbessern und Werbung entsprechend den Interessen der Benutzer anzuzeigen.",
+    "button": "Cookies akzeptieren"
   }
 }
