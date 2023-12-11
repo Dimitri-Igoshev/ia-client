@@ -1,7 +1,7 @@
 "use client";
 
 import { menu } from "@/data/menu";
-import { FunctionComponent} from "react";
+import { FunctionComponent, useState } from "react";
 import { AiOutlineClose } from "react-icons/ai";
 import { useLocale } from "next-intl";
 import loc from "@/utils/localType";
@@ -9,6 +9,7 @@ import { useRouter } from "next/navigation";
 import { MdOutlineLanguage } from "react-icons/md";
 import { Button } from "../ui";
 import { useTranslations } from "use-intl";
+import { Form } from "../widgets";
 
 interface MobileMenuProps {
 	isOpen: boolean;
@@ -24,10 +25,16 @@ const MobileMenu: FunctionComponent<MobileMenuProps> = ({
 	const t = useTranslations("Navbar");
 
 	const close = () => {
-		onClose()
-		document.body.style.overflow = "scroll"
-	}
-	
+		document.body.style.overflow = "scroll";
+		onClose();
+	};
+
+	const [isModal, setIsModal] = useState(false);
+
+	const closeModal = () => {
+		document.body.style.overflow = "scroll";
+		setIsModal(false);
+	};
 
 	return (
 		<>
@@ -39,7 +46,15 @@ const MobileMenu: FunctionComponent<MobileMenuProps> = ({
 					/>
 
 					<div className="flex justify-center">
-						<Button theme="filled" size="l" className="mb-9">
+						<Button
+							theme="filled"
+							size="l"
+							className="mb-9"
+							onClick={() => {
+								document.body.style.overflow = "hidden";
+								setIsModal(true);
+							}}
+						>
 							{t("button")}
 						</Button>
 					</div>
@@ -82,6 +97,8 @@ const MobileMenu: FunctionComponent<MobileMenuProps> = ({
 					</div>
 				</div>
 			)}
+
+			<Form isModal close={closeModal} visible={isModal} />
 		</>
 	);
 };

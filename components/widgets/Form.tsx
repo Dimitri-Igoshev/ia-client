@@ -188,7 +188,7 @@ export const Form = ({
 		>
 			<div
 				className={cn("flex flex-col justify-start", {
-					["w-1/2"]: isModal,
+					["w-full md:w-1/2"]: isModal,
 					["w-full"]: !isModal,
 				})}
 			>

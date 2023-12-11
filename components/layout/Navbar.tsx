@@ -9,6 +9,7 @@ import { Button, Language } from "../ui";
 import { HiOutlineMenu } from "react-icons/hi";
 import MobileMenu from "./MobileMenu";
 import { API_URL } from "@/config/env";
+import { Form } from "../widgets"
 
 interface NavbarProps {}
 
@@ -18,13 +19,8 @@ export const Navbar: FunctionComponent<NavbarProps> = () => {
 	const [isMenu, setIsMenu] = useState(false);
 	const [isModal, setIsModal] = useState(false);
 
-	// useEffect(() => {
-	// 	isMenu
-	// 		? (document.body.style.overflow = "hidden")
-	// 		: (document.body.style.overflow = "scroll");
-	// }, [isMenu]);
-
 	const closeModal = () => {
+		document.body.style.overflow = "scroll"
 		setIsModal(false);
 	};
 
@@ -51,20 +47,24 @@ export const Navbar: FunctionComponent<NavbarProps> = () => {
 				<Button
 					theme="filled"
 					className="hidden sm:flex"
-					onClick={() => setIsModal(true)}
+					onClick={() => {
+						document.body.style.overflow = "hidden";
+						setIsModal(true)
+					}}
 				>
 					{t("button")}
 				</Button>
 				<HiOutlineMenu
 					className="cursor-pointer text-1xl flex lg:hidden hover:text-primary"
 					onClick={() => {
-						setIsMenu(true);
 						document.body.style.overflow = "hidden";
+						setIsMenu(true);
 					}}
 				/>
 			</div>
 
 			<MobileMenu isOpen={isMenu} onClose={() => setIsMenu(false)} />
+			<Form isModal close={closeModal} visible={isModal} />
 		</header>
 	);
 };
