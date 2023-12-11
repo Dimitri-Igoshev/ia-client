@@ -97,17 +97,17 @@ export const ProjectCard = ({ project }: ProjectCardProps) => {
 							</Tilt>
 						)}
 					</div>
-					<div className="mt-3 sm:mt-[30px] ">
+					<div className="mt-5 sm:mt-[30px] ">
 						<Link href={project.link} target="_blank">
 							<span className="text-md sm:text-xl font-bold text-primary cursor-pointer">
 								{project.title[locale]}
 							</span>
 						</Link>
 					</div>
-					<span className="mt-0.5 sm:mt-[20px] text-base sm:text-xl font-light">
+					<span className="mt-2 sm:mt-[20px] text-base sm:text-xl font-light">
 						{project.desc[locale]}
 					</span>
-					<div className="flex gap-2 sm:gap-[20px] mt-1 sm:mt-[22px] flex-wrap">
+					<div className="flex gap-2 sm:gap-[20px] mt-2.5 sm:mt-[22px] flex-wrap">
 						{project.tags[locale].map((tag: any) => (
 							<span key={tag} className="text-xs sm:text-base font-light">
 								<span className="text-primary">#</span>
