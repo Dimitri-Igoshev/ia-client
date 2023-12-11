@@ -33,7 +33,7 @@ export const Select = ({ value, setValue, options, className, ...props }: InputP
 				{...props}
 			/>
 			<div
-				className="absolute w-full h-[40px] flex justify-end top-[5px] right-0 text-base cursor-pointer"
+				className="absolute w-full h-[40px] flex justify-end top-0 md:top-[5px] right-0 text-base cursor-pointer"
 				onClick={() => setOpened(state => !state)}
 			>
 				<div className="pl-[10px] bg-gray h-[30px] flex items-center">
