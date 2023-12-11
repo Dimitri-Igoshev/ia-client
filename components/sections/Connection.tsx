@@ -28,7 +28,7 @@ export const Connection = () => {
 					</motion.div>
 
 					<motion.div variants={slideIn('right', 'tween', 0.2, 0.75)} className="w-full mt-[60px] md:mt-0">
-						<Form hasTitle/>
+						<Form close={() => null} hasTitle/>
 					</motion.div>
 				</div>
 			</div>

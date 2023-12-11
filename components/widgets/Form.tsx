@@ -14,14 +14,14 @@ import { useTranslations } from "use-intl";
 import cn from "classnames";
 import useIsMobile from "@/hooks/useIsMobile";
 import FormWrapper from "./FormWrapper";
-import { API_URL } from "@/config/env"
+import { API_URL } from "@/config/env";
 
 interface FormProps
 	extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {
 	hasTitle?: boolean;
 	isModal?: boolean;
 	visible?: boolean;
-	close?: () => void;
+	close: () => void;
 }
 
 export interface IFormInput {
@@ -134,10 +134,7 @@ export const Form = ({
 		if (file) formData.append("file", file);
 
 		try {
-			const { data } = await axios.post(
-				`${API_URL}/application`,
-				formData
-			);
+			const { data } = await axios.post(`${API_URL}/application`, formData);
 			if (data) setSuccess(true);
 		} catch (error) {
 			setSuccess(false);
@@ -177,6 +174,13 @@ export const Form = ({
 		if (value.value === "complex") setService({ ...complexOptions[0] });
 	};
 
+	const cleare = () => {
+		setType(typeOptions[0]);
+		setService(developmentOptions[0]);
+		setFile(null);
+		reset()
+	};
+
 	return (
 		<div
 			className={cn({
@@ -200,14 +204,16 @@ export const Form = ({
 						className="flex flex-col mt-5 md:mt-[100px] px-10 md:px-[50px] py-12 md:py-[80px] mb-[50px] md:mb-[100px] bg-gray rounded-[25px] w-full gap-8 md:gap-[70px] h-full md:min-h-[670px]"
 						onSubmit={handleSubmit(onSubmit)}
 					>
-						{!hasTitle && (
-							<div className="w-full flex justify-end -mt-[30px]">
-								<AiOutlineClose
-									className="cursor-pointer text-xl hover:text-primary transition-all duration-500"
-									onClick={close}
-								/>
-							</div>
-						)}
+						<div className="w-full flex justify-end -my-[20px] md:-my-[30px]">
+							<AiOutlineClose
+								className="cursor-pointer text-xl hover:text-primary transition-all duration-500"
+								onClick={() => {
+									setSent(false);
+									cleare();
+									close();
+								}}
+							/>
+						</div>
 						{!sent && !loading && (
 							<>
 								<Input
@@ -290,7 +296,12 @@ export const Form = ({
 										{t("button")}
 									</Button>
 									<div className="flex w-full md:hidden">
-										<Button size="m" theme="filled" type="submit" className="w-full">
+										<Button
+											size="m"
+											theme="filled"
+											type="submit"
+											className="w-full"
+										>
 											{t("button")}
 										</Button>
 									</div>
