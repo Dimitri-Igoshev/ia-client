@@ -192,16 +192,16 @@ export const Form = ({
 		>
 			<div
 				className={cn("flex flex-col justify-start", {
-					["w-full md:w-1/2"]: isModal,
+					["w-full lg:w-1/2"]: isModal,
 					["w-full"]: !isModal,
 				})}
 			>
 				<FormWrapper>
 					{hasTitle && (
-						<h3 className="text-1xl md:text-3xl font-bold">{t("question")}</h3>
+						<h3 className="text-1xl lg:text-3xl font-bold">{t("question")}</h3>
 					)}
 					<form
-						className="flex flex-col mt-5 md:mt-[100px] px-10 md:px-[50px] py-12 md:py-[80px] mb-[50px] md:mb-[100px] bg-gray rounded-[25px] w-full gap-8 md:gap-[70px] h-full md:min-h-[670px]"
+						className="flex flex-col mt-5 md:mt-[50px] lg:mt-[100px] px-10 lg:px-[50px] py-12 lg:py-[80px] mb-[50px] lg:mb-[100px] bg-gray rounded-[25px] w-full gap-8 md:gap-[70px] h-full lg:min-h-[670px]"
 						onSubmit={handleSubmit(onSubmit)}
 					>
 						{(!loading && sent) || isModal ? (

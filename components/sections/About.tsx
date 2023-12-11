@@ -68,7 +68,7 @@ export const About = () => {
 			<Section hash="about" className="mt-0 sm:mt-[50px]">
 				<Header text={t('header')}/>
 
-				<motion.div variants={slideIn('down', 'tween', 0.2, 0.75)} className="mt-6 xl:mt-8 2xl:mt-[40px] grid grid-cols-[auto_auto] md:grid-cols-[auto_auto_auto_auto] gap-5 md:gap-10">
+				<motion.div variants={slideIn('down', 'tween', 0.2, 0.75)} className="mt-6 xl:mt-8 2xl:mt-[40px] grid grid-cols-[auto_auto] lg:grid-cols-[auto_auto_auto_auto] gap-5 md:gap-10">
 					<div className="flex flex-col justify-between text-sm md:text-xl font-light">
 						<div>{info[0].title[loc(locale)]}</div>
 						<div><motion.span className="text-2xl md:text-3xl font-bold text-primary mr-1 md:mr-2.5 xl:mr-5">{roundedYear}</motion.span>{info[0].text[loc(locale)]}</div>

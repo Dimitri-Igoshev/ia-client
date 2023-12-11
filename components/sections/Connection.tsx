@@ -16,18 +16,18 @@ export const Connection = () => {
 	return (
 		<Section hash="connection" full={true} className="relative overflow-hidden">
 			<div className="mt-0 sm:mt-[50px] md:container md:mx-auto">
-				<div className="mt-6 xl:mt-8 2xl:mt-[40px] grid grid-cols-1 md:grid-cols-2">
+				<div className="mt-6 xl:mt-8 2xl:mt-[40px] grid grid-cols-1 lg:grid-cols-[1fr_2fr] xl:grid-cols-2">
 					<motion.div
 						variants={slideIn('left', 'tween', 0.2, 0.75)}
 						className="w-full flex justify-center items-center group"
 					>
 						<Image
-							src={`${API_URL}/images/falcon9.png`} alt="rocket" width={isMobile ? 50 : 150} height={isMobile ? 233 : 700}
-							className="md:-mt-[80px] md:-ml-[100px] group-hover:scale-110 group-hover:rotate-12 transition-all duration-1000"
+							src={`${API_URL}/images/falcon9.png`} alt="rocket" width={isMobile ? 60 : 150} height={isMobile ? 279 : 700}
+							className="lg:-mt-[80px] lg:-ml-[100px] group-hover:scale-110 group-hover:rotate-12 transition-all duration-1000"
 						/>
 					</motion.div>
 
-					<motion.div variants={slideIn('right', 'tween', 0.2, 0.75)} className="w-full mt-[60px] md:mt-0">
+					<motion.div variants={slideIn('right', 'tween', 0.2, 0.75)} className="w-full mt-[60px] lg:mt-0">
 						<Form close={() => null} hasTitle/>
 					</motion.div>
 				</div>
