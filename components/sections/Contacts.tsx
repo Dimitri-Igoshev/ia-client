@@ -39,7 +39,7 @@ export const Contacts = () => {
 						<div className="flex flex-row items-center">
 							<SlLocationPin className="text-lg md:text-xl" />
 							<span className="ml-[10px] text-lg md:text-xl font-light">
-								Berlin, Cecilienstr. 183
+								12683 Berlin, Cecilienstr. 183
 							</span>
 						</div>
 						<div className="flex flex-row items-center">
