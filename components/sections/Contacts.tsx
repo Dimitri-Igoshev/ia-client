@@ -23,7 +23,7 @@ import Link from "next/link";
 const links = {
 	whatsApp: "https://wa.me/4915232151080",
 	telegram: "https://t.me/d_igoshev",
-	viber: "viber://chat?number=4915232151080",
+	viber: "viber://chat?number=%2B4915232151080",
 };
 
 export const Contacts = () => {
